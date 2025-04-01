@@ -1,13 +1,13 @@
 import { Order } from '../interfaces';
 
-// Simulasi konfigurasi Midtrans
-const MIDTRANS_CONFIG = {
-    clientKey: 'YOUR_MIDTRANS_CLIENT_KEY',
-    serverKey: 'YOUR_MIDTRANS_SERVER_KEY',
-    isProduction: false,
-    isSanitized: true,
-    is3ds: true
-};
+// // Simulasi konfigurasi Midtrans
+// const MIDTRANS_CONFIG = {
+//     clientKey: 'YOUR_MIDTRANS_CLIENT_KEY',
+//     serverKey: 'YOUR_MIDTRANS_SERVER_KEY',
+//     isProduction: false,
+//     isSanitized: true,
+//     is3ds: true
+// };
 
 // Fungsi untuk membuat transaksi Midtrans
 export const createMidtransTransaction = async (order: Order, customerData: { name: string, email: string, phone: string }) => {
@@ -52,7 +52,7 @@ export const createMidtransTransaction = async (order: Order, customerData: { na
 };
 
 // Fungsi untuk memproses pembayaran Midtrans di client side
-export const processPaymentWithMidtrans = async (snapToken: string) => {
+export const processPaymentWithMidtrans = async (_snapToken: string) => {
     // Pada implementasi sebenarnya, fungsi ini akan memanggil Midtrans Snap
     // window.snap.pay(snapToken, { ... callbacks ... });
 
